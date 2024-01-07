@@ -4,12 +4,10 @@ A streamlined CMake template for single-library projects.
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/CMake-Blueprints/simple-library-template/build-and-test.yml)
 
-- Compatible with CMake 3.5+\*
+- Compatible with CMake 3.4+
 - Library export headers generated automatically
 - Supports installing Debug and Release configuration to the same directory
 - Will install PDBs for MSVC builds
-
-\*This project actually supports CMake 3.4, but support for versions older than 3.5 is being phased out by Kitware.
 
 ## Caveats
 
@@ -18,6 +16,7 @@ This project has been trimmed down to the bare minimum still considered useful. 
 - Tests cannot access non-exported symbols from the library
 - The CMake config file generated does not support versioning, and will not handle `find_package()` calls for dependencies. A downstream project must call `find_package(<dependency>)` before calling `find_package(SimpleLibrary)`.
 - The library name is not namespaced and may conflict if used in a superbuild. This can be avoided by naming the target `${PACKAGE_NAME}_SimpleLib` instead, or ensuring the name is sufficiently unique.
+- `CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT` is only set in CMake 3.7.1+. When using older versions, the install prefix must be specified manually.
 
 ## Building and Testing
 
