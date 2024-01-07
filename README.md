@@ -2,7 +2,7 @@
 
 A streamlined CMake template for single-library projects.
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/CMake-Blueprints/simple-library-template/build-and-test.yaml?label=build)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/CMake-Blueprints/simple-library-template/build-and-test.yml)
 
 - Compatible with CMake 3.5+\*
 - Library export headers generated automatically
